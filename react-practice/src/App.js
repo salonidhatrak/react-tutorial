@@ -1,13 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Saloni</h1>
-      <h1>Dhatrak</h1>
-    </div>
+    // <div className="App">
+    <>
+      <nav>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </nav>
+      </>
+    // </div>
+ 
   );
 }
 
 export default App;
+
