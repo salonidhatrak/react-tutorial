@@ -15,15 +15,20 @@ const showAlert=(message,type)=>{
     msg:message,
     type:type
   })
+  setTimeout(()=>{
+    setAlert(null)
+  },3000)
 }
 
   const toggleMode = () => {
     if (mode === "light") {
       setMode("dark")
+      document.body.style.backgroundColor="#042743"
       showAlert("Dark mode", "success")
     }
     else {
       setMode("light")
+      document.body.style.backgroundColor="white"
       showAlert("Light mode", "success")
     }
   }
@@ -32,7 +37,7 @@ const showAlert=(message,type)=>{
       <Navbar title="textUtils1" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert}/>
       <div className='container'>
-        <TextForm heading="Analyase the Text"/>
+        <TextForm showAlert={showAlert} heading="Analyase the Text"/>
         {/* <About /> */}
       </div>
     </>
